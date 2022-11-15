@@ -22,7 +22,9 @@ public class UserPrincipal implements UserDetails {
         List<GrantedAuthority> authorityList = new ArrayList<>();
               GrantedAuthority authority =new SimpleGrantedAuthority(this.user.getRole().getDescription());
 
-        return null;
+              authorityList.add(authority);
+
+        return authorityList;
     }
 
     @Override
